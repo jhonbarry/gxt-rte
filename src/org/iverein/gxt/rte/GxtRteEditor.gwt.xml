@@ -1,0 +1,29 @@
+<module>
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <inherits name='com.extjs.gxt.ui.GXT'/>
+    <inherits name="net.auroris.ColorPicker.ColorPicker" />
+
+	<replace-with class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImplOpera">
+		<when-type-is class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImpl"/>
+		<when-property-is name="user.agent" value="opera"/>
+	</replace-with>
+
+	<replace-with class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImplSafari">
+		<when-type-is class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImpl"/>
+		<when-property-is name="user.agent" value="safari"/>
+	</replace-with>
+
+	<replace-with class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImplIE6">
+		<when-type-is class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImpl"/>
+		<when-property-is name="user.agent" value="ie6"/>
+	</replace-with>
+
+	<replace-with class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImplMozilla">
+		<when-type-is class="org.iverein.gxt.rte.client.editor.browserdep.EditorUtilsImpl"/>
+		<any>
+			<when-property-is name="user.agent" value="gecko1_8"/>
+			<when-property-is name="user.agent" value="gecko"/>
+		</any>
+	</replace-with>
+    
+</module>

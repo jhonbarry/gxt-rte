@@ -1,0 +1,6 @@
+<module>
+    <inherits name="org.iverein.gxt.rte.GxtRteEditor" />
+    <stylesheet src="css/ext-all.css"/>
+
+    <entry-point class='org.iverein.gxt.rte.client.GxtRteExample'/>
+</module>
